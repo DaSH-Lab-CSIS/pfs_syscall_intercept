@@ -42,3 +42,4 @@ target_link_libraries(syscall_logger PRIVATE syscall_intercept_shared)
 
 add_library(file_open_interceptor SHARED open_interceptor/file_open_interceptor.c)
 target_link_libraries(file_open_interceptor PRIVATE syscall_intercept_shared)
+target_include_directories(file_open_interceptor PRIVATE /usr/include/beegfs)
